@@ -9,12 +9,12 @@ import javax.persistence.Persistence;
 
 public class JPAutility {
 
-private static EntityManagerFactory emf;
-	
+	private static EntityManagerFactory emf;
+
 	private static Logger log = Logger.getLogger("app-rendere");
-	
+
 	public static EntityManager getEm() {
-		if(emf == null) {
+		if (emf == null) {
 			emf = Persistence.createEntityManagerFactory("app-rendere");
 		}
 		log.log(Level.FINE, "richiesto nuovo entitymanager");
@@ -22,7 +22,7 @@ private static EntityManagerFactory emf;
 	}
 
 	public static EntityManager getUtenteManager() {
-		
+
 		return null;
 	}
 

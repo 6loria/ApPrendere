@@ -1,31 +1,32 @@
-package project;
+package business;
 
 import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 
 import project.Utente;
+import utility.EntityManagerProvider;
 import utility.JPAutility;
 
 public class AccessoApplicazione {
-private static Logger log = Logger.getLogger("project");
-	
-	public static Boolean login(String email, String password) {
-		Boolean result = false;
-		EntityManager em = JPAutility.getUtenteManager();
+	private static Logger log = Logger.getLogger("project");
+
+	public static Utente login(String email, String password) {
+		Utente result = null;
+		EntityManager em = EntityManagerProvider.getEntityManager();
 		Utente u = em.find(Utente.class, email);
 		if (u != null) {
 			if (!u.getAttivo()) {
 				log.warning("accesso con utente non attivo");
-			}
-			if (!u.getPassword().equals(password)) {
+			} else if (!u.getPassword().equals(password)) {
 				log.warning("accesso con password errata");
+			} else {
+				result = u;
 			}
-			result = u.getAttivo() && u.getPassword().equals(password);
 		} else {
 			log.warning("l'utente " + email + " non esiste");
 		}
-		log.info("accesso di " + email + ": " + result);
+		log.info("accesso di " + email + ": " + (result == null ? "KO" : "OK"));
 		return result;
 	}
 

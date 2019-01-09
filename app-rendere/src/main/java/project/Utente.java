@@ -1,19 +1,32 @@
 package project;
 
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
+import javax.persistence.OneToMany;
 
 @Entity
 @Inheritance
-public class Utente {
+public class Utente implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	private String nome;
 	private String cognome;
 	@Id
 	private String email;
 	private String password;
+	
+	@OneToMany(mappedBy="utente")
+	private List<Terapia> terapia;
+	
 	private Boolean attivo;
+	
+	public Utente() {
+		super();
+	}
 	
 	public String getNome() {
 		return nome;
@@ -61,6 +74,14 @@ public class Utente {
 	public Object getRemove() {
 		
 		return null;
+	}
+
+	public List<Terapia> getTerapia() {
+		return terapia;
+	}
+
+	public void setTerapia(List<Terapia> terapia) {
+		this.terapia = terapia;
 	}
 
 

@@ -2,24 +2,37 @@ package project;
 
 
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Farmaco {
+public class Farmaco  implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private String aic;
 	
 	private String nome;
 	private String produttore;
-	@Id
-	private String aic;
 	private double concentrazione;
 	private int unita;
 	private String utilizzo;
-	private String principioAttivo;
 	private double prezzo;
-	@OneToOne
+	
+	@OneToOne(mappedBy="farmaco")
 	private FogliettoIllustrativo fogliettoIllustrativo;
+
+	@ManyToOne
+	private Terapia terapia;
+	
+	public Farmaco() {
+		super();
+	}
 	
 	public String getNome() {
 		return nome;
@@ -68,15 +81,7 @@ public class Farmaco {
 	public void setUtilizzo(String utilizzo) {
 		this.utilizzo = utilizzo;
 	}
-	
-	public String getPrincipioAttivo() {
-		return principioAttivo;
-	}
-	
-	public void setPrincipioAttivo(String principioAttivo) {
-		this.principioAttivo = principioAttivo;
-	}
-	
+
 	public double getPrezzo() {
 		return prezzo;
 	}
@@ -93,7 +98,11 @@ public class Farmaco {
 		this.fogliettoIllustrativo = fogliettoIllustrativo;
 	}
 
-	
+	public Terapia getTerapia() {
+		return terapia;
+	}
 
-	
+	public void setTerapia(Terapia terapia) {
+		this.terapia = terapia;
+	}
 }
