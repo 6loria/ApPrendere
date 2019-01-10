@@ -16,6 +16,7 @@ public class Terapia implements Serializable {
 	
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
+	private int id;
 	@ManyToOne
 	private Utente utente;
 	
@@ -46,6 +47,26 @@ public class Terapia implements Serializable {
 	}
 
 	public static long getSerializeversionuid() {
+		return serialVersionUID;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Allarme getAllarmi() {
+		return allarmi;
+	}
+
+	public void setAllarmi(Allarme allarmi) {
+		this.allarmi = allarmi;
+	}
+
+	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	

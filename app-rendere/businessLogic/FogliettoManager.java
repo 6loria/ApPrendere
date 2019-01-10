@@ -12,21 +12,18 @@ import utility.JPAutility;
 public class FogliettoManager {
 	private static Logger log = Logger.getLogger("app-rendere");
 	
-	public static void aggiungiFoglietto(FogliettoIllustrativo b) {
+	public static void aggiungiFoglietto(FogliettoIllustrativo fi) {
 		EntityManager em = JPAutility.getEm();
 		
-		FogliettoIllustrativo bDb = em.find(FogliettoIllustrativo.class, b.getFarmaco());
-		if (bDb == null) {
+		FogliettoIllustrativo fiDb = em.find(FogliettoIllustrativo.class, fi.getFarmaco());
+		if (fiDb == null) {
 			em.getTransaction().begin();
-			em.persist(b); // aggiungo a DB
+			em.persist(fi); // aggiungo a DB
 			em.getTransaction().commit();
 			log.log(Level.INFO, "aggiunto foglietto");
 		} else {
 			log.log(Level.WARNING, "foglietto esiste già");
 		}
 	}
-	public static List<FogliettoIllustrativo> elencoFoglietti() {
-		EntityManager em = JPAutility.getEm();
-		return em.createQuery("select b from FogliettoIllustrativo b", FogliettoIllustrativo.class).getResultList();
-}
+	
 }

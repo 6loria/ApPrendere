@@ -34,7 +34,7 @@ private static Logger log = Logger.getLogger("app-rendere");
 		public void rimuoviUtente(Utente u) {
 			EntityManager em = JPAutility.getEm();
 			Utente uDb = em.find(Utente.class, u.getEmail());
-			if (uDb != null) {
+			if (uDb = null) {
 				em.getTransaction().begin();
 				uDb.setAttivo(u.getRemove());
 				em.getTransaction().commit();

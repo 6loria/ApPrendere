@@ -14,6 +14,7 @@ public class FogliettoIllustrativo implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	@OneToOne
 	private Farmaco farmaco;
 	private String indicazioni;
@@ -126,6 +127,18 @@ public class FogliettoIllustrativo implements Serializable {
 
 	public void setComposizione(String composizione) {
 		this.composizione = composizione;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }
