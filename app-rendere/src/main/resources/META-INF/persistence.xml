@@ -8,7 +8,7 @@
 		<class>project.Allarme</class>
 		<class>project.Assunzioni</class>
 		<properties>
-			<property name="javax.persistence.schema-generation.database.action" value="create"/>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/smartblister"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>

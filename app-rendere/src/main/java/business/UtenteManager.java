@@ -1,12 +1,9 @@
-package businessLogic;
+package business;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-
-import org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider;
 
 import project.Utente;
 import utility.JPAutility;
@@ -34,9 +31,9 @@ private static Logger log = Logger.getLogger("app-rendere");
 		public void rimuoviUtente(Utente u) {
 			EntityManager em = JPAutility.getEm();
 			Utente uDb = em.find(Utente.class, u.getEmail());
-			if (uDb = null) {
+			if (uDb != null) {
 				em.getTransaction().begin();
-				uDb.setAttivo(u.getRemove());
+				em.remove(u);
 				em.getTransaction().commit();
 				log.log(Level.INFO, "utente rimosso");
 			}
@@ -49,6 +46,9 @@ private static Logger log = Logger.getLogger("app-rendere");
 			if (uDb != null) {
 				em.getTransaction().begin();
 				uDb.setAttivo(u.getAttivo());
+				uDb.setPassword(u.getPassword());
+				uDb.setEmail(u.getEmail());
+				uDb.setTerapia(u.getTerapia());
 				em.getTransaction().commit();
 				log.log(Level.INFO, "utente modificato");
 	

@@ -13,16 +13,16 @@ import javax.persistence.OneToMany;
 public class Utente implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	private String nome;
-	private String cognome;
 	@Id
 	private String email;
+	private String nome;
+	private String cognome;
 	private String password;
-	
+	private Boolean attivo;
 	@OneToMany(mappedBy="utente")
 	private List<Terapia> terapia;
 	
-	private Boolean attivo;
+	
 	
 	public Utente() {
 		super();
@@ -70,11 +70,6 @@ public class Utente implements Serializable {
 	public void setAttivo(Boolean attivo) {
 		this.attivo = attivo;
 	}
-	
-	public Object getRemove() {
-		
-		return null;
-	}
 
 	public List<Terapia> getTerapia() {
 		return terapia;
@@ -82,6 +77,10 @@ public class Utente implements Serializable {
 
 	public void setTerapia(List<Terapia> terapia) {
 		this.terapia = terapia;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 
