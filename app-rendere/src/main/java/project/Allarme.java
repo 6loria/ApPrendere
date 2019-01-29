@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Allarme implements Serializable {
@@ -18,12 +20,15 @@ public class Allarme implements Serializable {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id;
+	private String etichetta;
 	
 	@OneToMany(mappedBy="allarmi")
 	private List<Terapia>terapia;
 	private int cadenza;
 	private int occorrenza;
+	@Temporal(TemporalType.DATE)
 	private Date dataInizio;
+	@Temporal(TemporalType.DATE)
 	private Date dataFine;
 	private int giornoSettimana;
 	private boolean presa;
@@ -108,6 +113,20 @@ public class Allarme implements Serializable {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the etichetta
+	 */
+	public String getEtichetta() {
+		return etichetta;
+	}
+
+	/**
+	 * @param etichetta the etichetta to set
+	 */
+	public void setEtichetta(String etichetta) {
+		this.etichetta = etichetta;
 	}
 
 	

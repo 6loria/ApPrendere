@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import project.Allarme;
+import javax.persistence.EntityManager;
+
 import project.Assunzioni;
-import project.FogliettoIllustrativo;
 import utility.JPAutility;
 
 public class AssunzioniManager {
@@ -33,7 +33,7 @@ private static Logger log = Logger.getLogger("app-rendere");
 		Assunzioni assDb = em.find(Assunzioni.class, ass.getId());
 		if (assDb != null) {
 			em.getTransaction().begin();
-			assDb.setAssunzioni(ass.getAssunzioni());
+			//assDb.setAssunzioni(ass.getAssunzioni());
 			em.getTransaction().commit();
 			log.log(Level.INFO, "Assunzione modificata");
 

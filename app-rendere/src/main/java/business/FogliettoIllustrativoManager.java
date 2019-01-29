@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.persistence.EntityManager;
+
 import project.Allarme;
 import project.FogliettoIllustrativo;
 import utility.JPAutility;
@@ -14,7 +16,7 @@ private static Logger log = Logger.getLogger("app-rendere");
 	public static void aggiungiUtente(FogliettoIllustrativo fo) {
 		EntityManager em = JPAutility.getEm();
 		
-		Allarme foDb = em.find(FogliettoIllustrativo.class, fo.getId());
+		FogliettoIllustrativo foDb = em.find(FogliettoIllustrativo.class, fo.getId());
 		if (foDb == null) {
 			em.getTransaction().begin();
 			em.persist(fo); 
@@ -31,7 +33,7 @@ private static Logger log = Logger.getLogger("app-rendere");
 		FogliettoIllustrativo foDb = em.find(FogliettoIllustrativo.class, fo.getId());
 		if (foDb != null) {
 			em.getTransaction().begin();
-			foDb.setFogliettoIllustartivo(fo.getFogliettoIllustrativo());
+			//foDb.setFogliettoIllustartivo(fo.getFogliettoIllustrativo());
 			em.getTransaction().commit();
 			log.log(Level.INFO, "Foglietto illustrativo modificato");
 
@@ -40,7 +42,7 @@ private static Logger log = Logger.getLogger("app-rendere");
 
 	public void rimuoviTerapia(FogliettoIllustrativo fo) {
 		EntityManager em = JPAutility.getEm();
-		Allarme foDb = em.find(FogliettoIllustrativo.class, fo.getId());
+		FogliettoIllustrativo foDb = em.find(FogliettoIllustrativo.class, fo.getId());
 		if (foDb != null) {
 		em.getTransaction().begin();
 	    em.remove(fo);

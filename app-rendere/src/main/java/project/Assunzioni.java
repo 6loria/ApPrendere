@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Assunzioni implements Serializable {
@@ -21,6 +23,7 @@ public class Assunzioni implements Serializable {
 	@OneToMany(mappedBy="assunzioni")
 	private List <Allarme> allarmi;
 	
+	@Temporal(TemporalType.DATE)
 	private Date dataAssunzione;
 	
 	public Assunzioni() {
