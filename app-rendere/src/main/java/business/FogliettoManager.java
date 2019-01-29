@@ -24,7 +24,6 @@ public class FogliettoManager {
 		} else {
 			log.log(Level.WARNING, "foglietto già presente");
 		}
-		
 	}
 	public static void modificaFoglietto(FogliettoIllustrativo foglietto) {
 		EntityManager em = JPAutility.getEm();
