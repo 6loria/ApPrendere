@@ -33,41 +33,6 @@ function toggleFunction() {
 }
 
 $(() => {
-	$('#btnAccedi').click((e) => {
-		e.preventDefault();
-		$.ajax({
-			url: 'mvc/login',
-			method: 'post',
-			data: $('#frmLogin').serialize()
-		})
-		.done((utente) => {
-			if(utente) {
-				sessionStorage.setItem('utente', JSON.stringify(utente));
-				location.href = 'home.html';
-			} else {
-				sessionStorage.removeItem('utente');
-				$('#alertLoginFailed').text('Accesso fallito');
-				$('#alertLoginFailed').show('fast');
-				$('#txtEmail').val('');
-				$('#txtPassword').val('');
-			}
-		});
-	});
-	$('#btnRegistra').click((e) => {
-		e.preventDefault();
-		$.ajax({
-			url: 'mvc/registra',
-			method: 'post',
-			data: $('#frmRegistra').serialize()
-		})
-		.done((utente) => {
-			if(utente) {
-				sessionStorage.setItem('utente', JSON.stringify(utente));
-				location.href = 'home.html';
-			} else {
-				$('#alertRegistraFailed').text('Registrazione fallita');
-				$('#alertRegistraFailed').show('fast');
-			}
-		});
-	});
+	var utente = JSON.parse(sessionStorage.getItem('utente'));
+	$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
 });

@@ -96,26 +96,25 @@
 			<h3 class="w3-center">REGISTRAZIONE</h3>
 			<p class="w3-center">
 			<div align="Center">
-
-				<br>
-				<p>
-					<input type="text" name="Nome" placeholder="Nome"> <br>
-				<p>
-					<input type="text" name="Cognome" placeholder="Cognome"> <br>
-				<p>
-					<input type="text" name="E-Mail" placeholder="E-mail"> <br>
-				<p>
-					<input type="password" name="Password"
-						placeholder="Password (min 8 caratteri)"> <br>
-				<p>
-					<input type="password" name="Ripeti Password"
-						placeholder="Ripeti Password"> <br>
-				<p></p>
-				<br>
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Esci</button>
-				<button type="button" class="btn btn-primary">Registrati</button>
-
-
+				<form id="frmRegistra">
+					<br>
+					<p>
+						<input type="text" name="nome" placeholder="Nome"> <br>
+					<p>
+						<input type="text" name="cognome" placeholder="Cognome"> <br>
+					<p>
+						<input type="text" name="email" placeholder="E-mail"> <br>
+					<p>
+						<input type="password" name="password"
+							placeholder="Password (min 8 caratteri)"> <br>
+					<p>
+						<input type="password" placeholder="Ripeti Password"> <br>
+					<p></p>
+					<br>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Esci</button>
+					<button type="button" class="btn btn-primary" id="btnRegistra">Registrati</button>
+				</form>
+				<div class="alert alert-danger" role="alert" id="alertRegistraFailed" style="display:none;"></div>
 				<div>
 					<br>
 					<button type="button" class="btn btn-success btn-lg"
@@ -137,11 +136,12 @@
 									<div class="modal-body">
 										<div align="Center">
 											<p>
-												<input type="text" name="email" placeholder="E-mail">
+												<input type="text" name="email" id="txtEmail" placeholder="E-mail">
 												<br>
 											<p>
-												<input type="password" name="password" placeholder="Password (min 8 caratteri)"> <br>
+												<input type="password" name="password" id="txtPassword" placeholder="Password (min 8 caratteri)"> <br>
 										</div>
+										<div class="alert alert-danger" role="alert" id="alertLoginFailed" style="display:none;"></div>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-danger" data-dismiss="modal">Esci</button>
