@@ -20,7 +20,7 @@ body, html {
 .bgimg-1 {
 	background-image:
 		url("https://images.wallpaperscraft.com/image/doctor_patient_tonometer_pressure_measurement_hands_white_background_80207_1920x1080.jpg");
-	min-height: 100%;
+	min-height: 30%;
 }
 
 /* Second image (Portfolio) */
