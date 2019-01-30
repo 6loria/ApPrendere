@@ -1,5 +1,6 @@
 package business;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -70,5 +71,10 @@ public class UtenteManager {
 		} else {
 			log.log(Level.WARNING, "utente non attivo");
 		}
+	}
+	
+	public static List<Utente> elencoUtenti() {
+		EntityManager em = JPAutility.getEm();
+		return em.createQuery("select u from Utente  u", Utente.class).getResultList();
 	}
 }
