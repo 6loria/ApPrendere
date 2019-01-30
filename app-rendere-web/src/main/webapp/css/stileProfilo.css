@@ -52,3 +52,14 @@ body, html {
 		min-height: 400px;
 	}
 }
+
+body {
+	background: white;
+}
+
+.content {
+	max-width: 1000px;
+	margin: auto;
+	background: white;
+	padding: 10px;
+}
