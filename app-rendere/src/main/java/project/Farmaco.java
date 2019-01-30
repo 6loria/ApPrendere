@@ -19,10 +19,11 @@ public class Farmaco  implements Serializable {
 	
 	private String nome;
 	private String produttore;
-	private double concentrazione;
-	private int unita;
+	private Double concentrazione;
+	private Integer unita;
 	private String utilizzo;
-	private double prezzo;
+	private Double prezzo;
+	private String principioAttivo;
 	
 	@OneToOne(mappedBy="farmaco")
 	private FogliettoIllustrativo fogliettoIllustrativo;
@@ -58,19 +59,19 @@ public class Farmaco  implements Serializable {
 		this.aic = aic;
 	}
 	
-	public double getConcentrazione() {
+	public Double getConcentrazione() {
 		return concentrazione;
 	}
 	
-	public void setConcentrazione(double concentrazione) {
+	public void setConcentrazione(Double concentrazione) {
 		this.concentrazione = concentrazione;
 	}
 	
-	public int getUnita() {
+	public Integer getUnita() {
 		return unita;
 	}
 	
-	public void setUnita(int unita) {
+	public void setUnita(Integer unita) {
 		this.unita = unita;
 	}
 	
@@ -82,11 +83,11 @@ public class Farmaco  implements Serializable {
 		this.utilizzo = utilizzo;
 	}
 
-	public double getPrezzo() {
+	public Double getPrezzo() {
 		return prezzo;
 	}
 	
-	public void setPrezzo(double prezzo) {
+	public void setPrezzo(Double prezzo) {
 		this.prezzo = prezzo;
 	}
 
@@ -104,5 +105,19 @@ public class Farmaco  implements Serializable {
 
 	public void setTerapia(Terapia terapia) {
 		this.terapia = terapia;
+	}
+
+	/**
+	 * @return the principioAttivo
+	 */
+	public String getPrincipioAttivo() {
+		return principioAttivo;
+	}
+
+	/**
+	 * @param principioAttivo the principioAttivo to set
+	 */
+	public void setPrincipioAttivo(String principioAttivo) {
+		this.principioAttivo = principioAttivo;
 	}
 }

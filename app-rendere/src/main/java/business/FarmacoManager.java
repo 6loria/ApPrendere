@@ -45,6 +45,13 @@ private static Logger log = Logger.getLogger("app-rendere");
 		EntityManager em = JPAutility.getEm();
 		return em.createQuery("select f from Farmaco f", Farmaco.class).getResultList();
 	}
+	
+	public static List<Farmaco> ricercaFarmaci(String nomeFarmaco){
+		EntityManager em = JPAutility.getEm();
+		return em.createQuery("select f from Farmaco f where f.nome LIKE :nomeFarmaco", Farmaco.class)
+				.setParameter("nomeFarmaco", "%" + nomeFarmaco + "%")
+				.getResultList();
+	}
 
-}
+} 
 
