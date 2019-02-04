@@ -31,3 +31,8 @@
 				x.className = x.className.replace(" w3-show", "");
 			}
 		}
+			$(() => {
+				var farmaco = JSON.parse(sessionStorage.getItem('farmaco'));
+				$("#nomeFrmc").text(farmaco.nome);
+			});
+		

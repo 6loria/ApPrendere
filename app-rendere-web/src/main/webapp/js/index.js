@@ -80,7 +80,7 @@ $(() => {
 		.done((farmaco) => {
 			if(farmaco) {
 				sessionStorage.setItem('farmaco', JSON.stringify(farmaco));
-				location.href = 'ListaFarmaci.html';
+				location.href = 'FogliettoIllustrativo.html';
 			} else {
 				$('#alertRicercaFailed').text('Spiacenti, questo farmaco non è presente ');
 				$('#alertRicercaFailed').show('fast');
