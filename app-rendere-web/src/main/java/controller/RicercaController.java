@@ -16,9 +16,8 @@ import project.Farmaco;
 public class RicercaController {
 	@RequestMapping(value = "/ricercaFarmaco", method = RequestMethod.GET)
 	public @ResponseBody List<Farmaco> ricerca(@QueryParam("nomeFarmaco") String nomeFarmaco) {
-		 return FarmacoManager.ricercaFarmaci(nomeFarmaco);
-				
-		
+		return FarmacoManager.ricercaFarmaci(nomeFarmaco);
+
 	}
 
 }
