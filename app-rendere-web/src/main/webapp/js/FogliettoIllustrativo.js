@@ -1,3 +1,17 @@
+		$(() => {
+			var farmaco = JSON.parse(sessionStorage.getItem('farmaco'));
+			$("#nomeFrmc").text(farmaco[0].nome);
+		
+			var foglietto = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#indicazioni").text(farmaco[0].fogliettoIllustrativo.indicazioni);
+		});
+		
+		
+	
+		
+		
+		
+
 		// Modal Image Gallery
 		function onClick(element) {
 			document.getElementById("img01").src = element.src;
@@ -31,8 +45,4 @@
 				x.className = x.className.replace(" w3-show", "");
 			}
 		}
-			$(() => {
-				var farmaco = JSON.parse(sessionStorage.getItem('farmaco'));
-				$("#nomeFrmc").text(farmaco.nome);
-			});
 		

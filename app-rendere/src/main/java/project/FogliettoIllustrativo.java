@@ -2,11 +2,15 @@ package project;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class FogliettoIllustrativo implements Serializable {
@@ -15,9 +19,12 @@ public class FogliettoIllustrativo implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@JsonIgnore
 	@OneToOne
 	private Farmaco farmaco;
+	@Column(length=10000)
 	private String indicazioni;
+	@Lob
 	private String precauzioni;
 	private String avvertenze;
 	private String sovradosaggio;

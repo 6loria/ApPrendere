@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
@@ -16,7 +17,6 @@ public class Farmaco  implements Serializable {
 	
 	@Id
 	private String aic;
-	
 	private String nome;
 	private String produttore;
 	private Double concentrazione;
@@ -107,16 +107,11 @@ public class Farmaco  implements Serializable {
 		this.terapia = terapia;
 	}
 
-	/**
-	 * @return the principioAttivo
-	 */
+	
 	public String getPrincipioAttivo() {
 		return principioAttivo;
 	}
 
-	/**
-	 * @param principioAttivo the principioAttivo to set
-	 */
 	public void setPrincipioAttivo(String principioAttivo) {
 		this.principioAttivo = principioAttivo;
 	}
