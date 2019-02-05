@@ -31,3 +31,8 @@
 				x.className = x.className.replace(" w3-show", "");
 			}
 		}
+		
+		$(() => {
+			var utente = JSON.parse(sessionStorage.getItem('utente'));
+			$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
+		});
