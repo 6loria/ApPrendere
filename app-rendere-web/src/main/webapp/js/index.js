@@ -78,7 +78,7 @@ $(() => {
 		    data: $('#ResearchForm').serialize()
 		})
 		.done((farmaco) => {
-			if(farmaco) {
+			if(farmaco && farmaco.length > 0) {
 				sessionStorage.setItem('farmaco', JSON.stringify(farmaco));
 				location.href = 'FogliettoIllustrativo.html';
 			} else {

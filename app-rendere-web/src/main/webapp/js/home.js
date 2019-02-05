@@ -37,7 +37,7 @@ $(() => {
 	$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
 	$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
 });
-$('#btnRicerca').click((e) => {
+$('#btnHome').click((e) => {
 	e.preventDefault();
 	$.ajax({
 		url: 'mvc/ricercaFarmaco',

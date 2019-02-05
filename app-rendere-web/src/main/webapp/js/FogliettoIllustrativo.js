@@ -4,6 +4,41 @@
 		
 			var foglietto = JSON.parse(sessionStorage.getItem('farmaco'))
 			$("#indicazioni").text(farmaco[0].fogliettoIllustrativo.indicazioni);
+			
+			var foglietto1 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#controIndicazioni").text(farmaco[0].fogliettoIllustrativo.controindicazioni);
+			
+			var foglietto2 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#avvertenze").text(farmaco[0].fogliettoIllustrativo.avvertenze);
+			
+			var foglietto3 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#composizione").text(farmaco[0].fogliettoIllustrativo.composizione);
+			
+			var foglietto4 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#effettiIndesiderati").text(farmaco[0].fogliettoIllustrativo.effettiIndesiderati);
+			
+			var foglietto5 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#interazioni").text(farmaco[0].fogliettoIllustrativo.interazioni);
+			
+			var foglietto6 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#modiDuso").text(farmaco[0].fogliettoIllustrativo.modiDuso);
+			
+			var foglietto7 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#precauzioni").text(farmaco[0].fogliettoIllustrativo.precauzioni);
+			
+			var foglietto8 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#principioAttivo").text(farmaco[0].fogliettoIllustrativo.principioAttivo);
+			
+			var foglietto9 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#scadenzaConservazione").text(farmaco[0].fogliettoIllustrativo.scadenzaConservazione);
+			
+			var foglietto10 = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#sovradosaggio").text(farmaco[0].fogliettoIllustrativo.sovradosaggio);
+			
+			
+			
+			
+			
 		});
 		
 		
