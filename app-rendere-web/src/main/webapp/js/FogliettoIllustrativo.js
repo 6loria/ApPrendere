@@ -1,8 +1,11 @@
 		$(() => {
 			var farmaco = JSON.parse(sessionStorage.getItem('farmaco'));
 			$("#nomeFrmc").text(farmaco[0].nome);
-			
+		
+			var foglietto = JSON.parse(sessionStorage.getItem('farmaco'))
+			$("#indicazioni").text(farmaco[0].fogliettoIllustrativo.indicazioni);
 		});
+		
 		
 	
 		
