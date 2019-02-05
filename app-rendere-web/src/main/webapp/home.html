@@ -21,13 +21,14 @@
 				title="Toggle Navigation Menu"> <i class="fa fa-bars"></i>
 			</a> 
 			<a href="#home" class="w3-bar-item w3-button">HOME</a> 
-			<a href="#fermata cerca" class="w3-bar-item w3-button w3-hide-small">
-				<i class="fa fa-search"></i> RICERCA FARMACO
-			</a> 
 			<a href="http://localhost:8080/SitoWeb2/profilo.html"
 					class="w3-bar-item w3-button w3-hide-small">
 				<i class="fa fa-user"></i> <span id="lblUtente"></span>
+			</a> 			
+			<a href="#fermata cerca" class="w3-bar-item w3-button w3-hide-small">
+				<i class="fa fa-search"></i> RICERCA FARMACO
 			</a> 
+
 			<a class="w3-bar-item btn-btn-link w3-button w3-hide-small w3-right w3-hover-red"></a>
 		</div>
 		
@@ -38,7 +39,7 @@
 			<a href="#fermata cerca"  class="w3-bar-item w3-button"
 				onclick="toggleFunction()">RICERCA FARMACO</a> <a
 				href="INSERIRE LINK DELLA PAGINA UTENTE"
-				class="w3-bar-item w3-button" onclick="toggleFunction()">UTENTE</a>
+				class="w3-bar-item w3-button" onclick="toggleFunction()"><span id="lblUtentePiccolo"></span></a>
 		</div>
 	</div>
 	
@@ -56,18 +57,23 @@
 	</div>
 
 	<!-- ricerca farmaco -->
+	<form id="ResearchForm">
 	<div id="fermata cerca"></div>
 	<div class="w3-container w3-center">
+		
 		<p class="lead">
 			<br> <br> <input class="shadow p-3 mb-5 bg-white rounded"
 				type="search" placeholder="Inserisci farmaco" aria-label="Search"
 				id="cerca"> <br>
 			<button class="btn btn-success btn-lg" type="submit"
-				id="btnCerca">Cerca</button>
+				id="btnRicerca">Cerca</button>
 			<br> <br>
 			<button class="btn btn-warning btn-lg" type="submit"
 				id="bottoneCerca">Vai alla lista completa</button>
+				
 	</div>
+	</form>
+	
 
 
 	<!-- Second Parallax Image con la scritta ricerca farmaco -->

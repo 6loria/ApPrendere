@@ -35,4 +35,22 @@ function toggleFunction() {
 $(() => {
 	var utente = JSON.parse(sessionStorage.getItem('utente'));
 	$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
+	$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
+});
+$('#btnRicerca').click((e) => {
+	e.preventDefault();
+	$.ajax({
+		url: 'mvc/ricercaFarmaco',
+	    method: 'get',
+	    data: $('#ResearchForm').serialize()
+	})
+	.done((farmaco) => {
+		if(farmaco) {
+			sessionStorage.setItem('farmaco', JSON.stringify(farmaco));
+			location.href = 'FogliettoIllustrativo.html';
+		} else {
+			$('#alertRicercaFailed').text('Spiacenti, questo farmaco non è presente ');
+			$('#alertRicercaFailed').show('fast');
+		}
+	});
 });
