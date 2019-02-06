@@ -34,8 +34,6 @@ function toggleFunction() {
 
 
 
-
-
 $(() => {
 	$('#btnAccedi').click((e) => {
 		e.preventDefault();
