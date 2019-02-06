@@ -35,7 +35,6 @@ function toggleFunction() {
 $(() => {
 	var utente = JSON.parse(sessionStorage.getItem('utente'));
 	$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
-<<<<<<< HEAD
 });
 
 $('#btnRicerca').click((e) => {
@@ -56,8 +55,8 @@ $('#btnRicerca').click((e) => {
 	});
 });
 });
-=======
-	$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
+
+$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
 });
 $('#btnRicerca').click((e) => {
 	e.preventDefault();
@@ -76,4 +75,4 @@ $('#btnRicerca').click((e) => {
 		}
 	});
 });
->>>>>>> branch 'master' of https://github.com/6loria/ApPrendere.git
+
