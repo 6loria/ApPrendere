@@ -35,6 +35,28 @@ function toggleFunction() {
 $(() => {
 	var utente = JSON.parse(sessionStorage.getItem('utente'));
 	$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
+<<<<<<< HEAD
+});
+
+$('#btnRicerca').click((e) => {
+	e.preventDefault();
+	$.ajax({
+		url: 'mvc/ricercaFarmaco',
+	    method: 'get',
+	    data: $('#ResearchForm').serialize()
+	})
+	.done((farmaco) => {
+		if(farmaco) {
+			sessionStorage.setItem('farmaco', JSON.stringify(farmaco));
+			location.href = 'FogliettoIllustrativo.html';
+		} else {
+			$('#alertRicercaFailed').text('Spiacenti, questo farmaco non è presente ');
+			$('#alertRicercaFailed').show('fast');
+		}
+	});
+});
+});
+=======
 	$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
 });
 $('#btnHome').click((e) => {
@@ -54,3 +76,4 @@ $('#btnHome').click((e) => {
 		}
 	});
 });
+>>>>>>> branch 'master' of https://github.com/6loria/ApPrendere.git
