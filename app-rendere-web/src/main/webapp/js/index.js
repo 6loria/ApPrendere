@@ -34,8 +34,6 @@ function toggleFunction() {
 
 
 
-
-
 $(() => {
 	$('#btnAccedi').click((e) => {
 		e.preventDefault();
@@ -57,6 +55,7 @@ $(() => {
 			}
 		});
 	});
+	
 	$('#btnRegistra').click((e) => {
 		e.preventDefault();
 		$.ajax({
@@ -74,6 +73,7 @@ $(() => {
 			}
 		});
 	});
+	
 	$('#btnRicerca').click((e) => {
 		e.preventDefault();
 		$.ajax({
