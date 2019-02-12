@@ -33,6 +33,11 @@
 		}
 		
 		$(() => {
+			var utente = JSON.parse(sessionStorage.getItem('utente'));
+			$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
+		});
+		
+		$(() => {
 			var farmaco = JSON.parse(sessionStorage.getItem('farmaco'));
 			$("#far").text(farmaco.nome + ' ' +
 							 farmaco.aic + ' ' +

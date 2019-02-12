@@ -24,7 +24,7 @@
 			</a>
 			<a  href="#home" class="w3-bar-item w3-button">HOME</a>
 			
-			<a	href="#fermata cerca" class="w3-bar-item w3-button w3-hide-small">
+			<a	href="http://localhost:8080/app-rendere/FogliettoIllustrativo.html" class="w3-bar-item w3-button w3-hide-small">
             <i  class="fa fa-search"></i> RICERCA FARMACO</a>
             
 			<a  href="http://localhost:8080/app-rendere/profilo.html"
@@ -40,11 +40,12 @@
 		<div id="navDemo"
 			class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
 				
-			<a href="http://localhost:8080/app-rendere/profilo.html"
-				class="w3-bar-item w3-button" onclick="toggleFunction()" >UTENTE</a>
+			<a href="#fermata cerca"
+				class="w3-bar-item w3-button" onclick="toggleFunction()" >RICERCA FARMACO</a>
  			<a
 				href="http://localhost:8080/app-rendere/profilo.html"
-				class="w3-bar-item w3-button" onclick="toggleFunction()"><span id="lblUtentePiccolo"></span></a>
+				class="w3-bar-item w3-button" onclick="toggleFunction()"><span id="lblUtentePiccolo"></span>
+				</a>
 
 		</div>
 	</div>
@@ -75,8 +76,8 @@
 			<button class="btn btn-success btn-lg" type="submit"
 				id="btnRicerca">Cerca</button>
 			<br> <br>
-			<button class="btn btn-warning btn-lg" type="submit"
-				id="bottoneCerca">Vai alla lista completa</button>
+			<a href="http://localhost:8080/app-rendere/ListaFarmaci.html" class="btn btn-warning btn-lg"  type="submit"
+				id="bottoneCerca">Vai alla lista completa </a>
 				
 	</div>
 	</form>
