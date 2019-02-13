@@ -35,6 +35,7 @@
 		$(() => {
 			var utente = JSON.parse(sessionStorage.getItem('utente'));
 			$('#lblUtente').text(utente.cognome + ' ' + utente.nome);
+			$('#lblUtentePiccolo').text(utente.cognome + ' ' + utente.nome);
 		});
 		
 		$(() => {
