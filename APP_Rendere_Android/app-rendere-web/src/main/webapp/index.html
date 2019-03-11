@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/stile.css">
+<body>
+
+	<!-- Navbar -->
+	<div class="w3-top">
+		<div class="w3-bar" id="myNavbar">
+			<a
+				class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+				href="javascript:void(0);" onclick="toggleFunction()"
+				title="Toggle Navigation Menu"> <i class="fa fa-bars"></i>
+			</a>
+			<a  href="#home" class="w3-bar-item w3-button">HOME</a>
+			
+			<a	href="#fermata cerca" class="w3-bar-item w3-button w3-hide-small">
+            <i  class="fa fa-search"></i> RICERCA FARMACO</a>
+            
+			<a  href="http://localhost:8080/app-rendere/#registrazione"
+				class="w3-bar-item w3-button w3-hide-small"> <i
+				class="fa fa-user"></i> REGISTRAZIONE </a>
+				
+			<a href="#registrazione"
+			   class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"> </a>
+		</div>
+	
+
+	<!-- Navbar on small screens -->
+	<div id="navDemo"
+		class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+		
+
+		<a href="#fermata cerca" class="w3-bar-item w3-button"
+			onclick="toggleFunction()">RICERCA FARMACO</a> <a
+			href="#registrazione" class="w3-bar-item w3-button"
+			onclick="toggleFunction()">REGISTRAZIONE</a>
+	</div>
+	</div>
+	
+
+	<!-- nome e logo dell app-->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+		<div class="w3-display-middle" style="white-space: nowrap;">
+			<span
+				class="w3-hide-small w3-center w3-padding-large w3-animate-opacity">
+				<span  id="nomeFrmc" class="w3-hide-small"><img src="https://i.ibb.co/RbD1ZnK/logo-8b98fe2a886f0bb00dea0fc9c99ce362.png"></span> <br>
+			</span>
+			<div align="center">
+				<img src="https://img.icons8.com/color/100/000000/pill.png">
+			</div>
+		</div>
+	</div>
+
+	<!-- ricerca farmaco -->
+
+	<div id="fermata cerca"></div>
+	<div class="w3-container w3-center">
+	<form id="ResearchForm">
+		<p class="lead">
+			<br> <br> 
+		<input class="shadow p-3 mb-5 bg-white rounded"
+				type="search" placeholder="Inserisci farmaco" aria-label="Search"
+				id="cerca" name="nomeFarmaco"> <br> <br>
+		<button class="btn btn-success btn-lg" type="button"
+				id="btnRicerca">Cerca</button> 
+				
+			<br> <br> <br>
+		<button class="btn btn-warning btn-lg" type="button"
+				id="btnFullList">Vai alla lista completa</button>
+			<br> <br> <br>
+	</form>
+	</div>
+	
+	<!-- Second Parallax Image con scritta ricerca farmaco -->
+	<div class="bgimg-2 w3-display-container w3-opacity-min">
+		<div class="w3-display-middle">
+			<span class="w3-xxlarge w3-text-black w3-wide">RICERCA FARMACO</span>
+		</div>
+	</div>
+
+	
+
+		<!-- pannello di registrazione account -->
+		<div class="w3-content w3-container w3-padding-64" id="registrazione">
+			<h3 class="w3-center">REGISTRAZIONE</h3>
+			<p class="w3-center">
+			<div align="Center">
+				<form id="frmRegistra">
+					<br>
+					<p>
+						<input type="text" name="nome" placeholder="Nome"> <br>
+					<p>
+						<input type="text" name="cognome" placeholder="Cognome"> <br>
+					<p>
+						<input type="text" name="email" placeholder="E-mail"> <br>
+					<p>
+						<input type="password" name="password"
+							placeholder="Password (min 8 caratteri)"> <br>
+					<p>
+						<input type="password" placeholder="Ripeti Password"> <br>
+					<p></p>
+					<br>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Esci</button>
+					<button type="button" class="btn btn-primary" id="btnRegistra">Registrati</button>
+				</form>
+				<div class="alert alert-danger" role="alert" id="alertRegistraFailed" style="display:none;"></div>
+				<div>
+					<br>
+					<button type="button" class="btn btn-success btn-lg"
+						data-toggle="modal" data-target="#exampleModal2" id="btLog">Accedi</button>
+
+
+					<div class="modal fade" id="exampleModal2" tabindex="-1"
+						role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true" align=center>
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<form id="frmLogin">
+									<div class="modal-header">
+										<h5 class="modal-title">Accedi</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div align="Center">
+											<p>
+												<input type="text" name="email" id="txtEmail" placeholder="E-mail">
+												<br>
+											<p>
+												<input type="password" name="password" id="txtPassword" placeholder="Password (min 8 caratteri)"> <br>
+										</div>
+										<div class="alert alert-danger" role="alert" id="alertLoginFailed" style="display:none;"></div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Esci</button>
+										<button type="button" id="btnAccedi" class="btn btn-primary">Accedi</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	<!-- Modal for full size images on click-->
+	<div id="modal01" class="w3-modal w3-black"
+		onclick="this.style.display='none'">
+		<span class="w3-button w3-large w3-black w3-display-topright"
+			title="Close Modal Image"><i class="fa fa-remove"></i></span>
+		<div
+			class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+			<img id="img01" class="w3-image">
+			<p id="caption" class="w3-opacity w3-large"></p>
+		</div>
+	</div>
+
+	<!-- Third Parallax Image con scritta registrazione -->
+	<div class="bgimg-3 w3-display-container w3-opacity-min">
+		<div class="w3-display-middle">
+			<span class="w3-xxlarge w3-text-black w3-wide">REGISTRAZIONE</span>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<footer
+		class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+		<a href="#home" class="w3-button w3-light-grey"><i
+			class="fa fa-arrow-up w3-margin-right"></i>TORNA ALL'INIZIO</a>
+		<div class="w3-xlarge w3-section">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i> <i
+				class="fa fa-instagram w3-hover-opacity"></i> <i
+				class="fa fa-snapchat w3-hover-opacity"></i> <i
+				class="fa fa-pinterest-p w3-hover-opacity"></i> <i
+				class="fa fa-twitter w3-hover-opacity"></i> <i
+				class="fa fa-linkedin w3-hover-opacity"></i>
+		</div>
+	</footer>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+		
+	<script src="js/index.js"></script>		
+</body>
+</html>
