@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sfondo"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aggiorna il profilo"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="5dp"
+            android:hint="email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/name"
+            android:drawablePadding="5dp"
+            android:hint="name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/user_name"
+            android:drawablePadding="5dp"
+            android:hint="username"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonLoginSave"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Save "
+            android:textAllCaps="false"
+            android:textColor="@color/form" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cambia password"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/editTextCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="5dp"
+            android:hint="current password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="5dp"
+            android:hint="new password"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/buttonChangePassword"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Cambia la password"
+            android:textAllCaps="false"
+            android:textColor="@color/form" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/form" />
+
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="#d10000"
+            android:text="Cancella Profilo"
+            android:textAllCaps="false"
+            android:textColor="@color/form" />
+
+    </LinearLayout>
+
+</ScrollView>
