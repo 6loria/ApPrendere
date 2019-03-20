@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<title>Lista farmaci</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/stileFogliettoIllustrativo.css">
+<body>
+
+	<!-- Navbar  -->
+	<div class="w3-top">
+		<div class="w3-bar" id="myNavbar">
+			<a  class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+				href="javascript:void(0);" onclick="toggleFunction()"
+				title="Toggle Navigation Menu"> <i class="fa fa-bars"></i></a>
+				
+				<a href="http://localhost:8080/app-rendere/#home" class="w3-bar-item w3-button">HOME</a>
+				
+				<a href="#fermata cerca" class="w3-bar-item w3-button w3-hide-small"><i
+				class="fa fa-search"></i> RICERCA FARMACO</a>
+				
+				<a href="http://localhost:8080/app-rendere/profilo.html"
+				class="w3-bar-item w3-button w3-hide-small"> <i
+				class="fa fa-user"></i> <span id="lblUtente"></span></a>
+				
+				<a class="w3-bar-item btn-btn-link w3-button w3-hide-small w3-right w3-hover-red"> </a>
+		</div>
+
+		<!-- Navbar on small screens -->
+		<div id="navDemo"
+			class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+
+			<a href="#fermata cerca" class="w3-bar-item w3-button"
+				onclick="toggleFunction()">RICERCA FARMACO</a>
+				<a href="http://localhost:8080/app-rendere/profilo.html"
+				class="w3-bar-item w3-button" onclick="toggleFunction()"><span id="lblUtentePiccolo"></span></a>
+		</div>
+		
+	</div>
+
+	<!-- logo -->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+		<div class="w3-display-middle" style="white-space: nowrap;">
+				<img src="https://i.ibb.co/RbD1ZnK/logo-8b98fe2a886f0bb00dea0fc9c99ce362.png">
+			</div>
+		</div>
+	
+
+	<!-- Container (About Section) -->
+
+<br>
+<div class="w3-container">
+	<div style="height: auto; overflow: hidden">
+		<div align="center">
+		<h2>Ricerca farmaco</h2>
+<br>
+	<a href="#a" onclick="toggleFunction()" class="btn btn-light btn-lg">A</a>
+  	<a href="#b"  onclick="toggleFunction()" class="btn btn-light btn-lg">B</a>
+  	<a href="#c"  onclick="toggleFunction()" class="btn btn-light btn-lg">C</a>
+  	<a href="#d"  onclick="toggleFunction()" class="btn btn-light btn-lg">D</a>
+  	<a href="#e"  onclick="toggleFunction()" class="btn btn-light btn-lg">E</a>
+  	<a href="#f"  onclick="toggleFunction()" class="btn btn-light btn-lg">F</a>
+  	<a href="#g"  onclick="toggleFunction()" class="btn btn-light btn-lg">G</a>
+  	<a href="#h"  onclick="toggleFunction()" class="btn btn-light btn-lg">H</a>
+  	<a href="#i"  onclick="toggleFunction()" class="btn btn-light btn-lg">I</a>
+  	<a href="#j"  onclick="toggleFunction()" class="btn btn-light btn-lg">J</a>
+  	<a href="#k"  onclick="toggleFunction()" class="btn btn-light btn-lg">K</a>
+  	<a href="#l"  onclick="toggleFunction()" class="btn btn-light btn-lg">L</a>
+  	<a href="#m"  onclick="location.href='url'" class="btn btn-light btn-lg">M</a>
+    <a href="#n"  onclick="location.href='url'" class="btn btn-light btn-lg">N</a>
+	<a href="#o"  onclick="location.href='url'" class="btn btn-light btn-lg">O</a>
+  	<a href="#p"  onclick="location.href='url'" class="btn btn-light btn-lg">P</a>
+  	<a href="#q"  onclick="location.href='url'" class="btn btn-light btn-lg">Q</a>
+  	<a href="#r"  onclick="location.href='url'" class="btn btn-light btn-lg">R</a>
+  	<a href="#s"  onclick="location.href='url'" class="btn btn-light btn-lg">S</a>
+  	<a href="#t"  onclick="location.href='url'" class="btn btn-light btn-lg">T</a>
+  	<a href="#u"  onclick="location.href='url'" class="btn btn-light btn-lg">U</a>
+  	<a href="#v"  onclick="location.href='url'" class="btn btn-light btn-lg">V</a>
+  	<a href="#w"  onclick="location.href='url'" class="btn btn-light btn-lg">W</a>
+  	<a href="#x"  onclick="location.href='url'" class="btn btn-light btn-lg">X</a>
+  	<a href="#y"  onclick="location.href='url'" class="btn btn-light btn-lg">Y</a>
+  	<a href="#z"  onclick="location.href='url'" class="btn btn-light btn-lg">Z</a>
+
+		</div>
+	</div>
+</div>
+
+	<div class="w3-container w3-center">
+		<p class="lead">
+		<div class="list-group">
+
+		</div>
+
+
+	</div>
+
+
+
+	<!-- Second Parallax Image with Portfolio Text -->
+	<div class="bgimg-2 w3-display-container w3-opacity-min">
+		<div class="w3-display-middle">
+			<span class="w3-xxlarge w3-text-black w3-wide"  id="far">   </span>
+		</div>
+	</div>
+	
+	<div align="center">
+	<a id="a"> </a>
+	<h1>A</h1>
+<li><a href="#">	Abacavir E Lamivudina Doc Generici	 </a> </li>
+<li><a href="#">	Abacavir E Lamivudina Dr. Reddy's	 </a> </li>
+<li><a href="#">	Abacavir E Lamivudina EG	 </a> </li>
+<li><a href="#">	Abacavir E Lamivudina Teva	 </a> </li>
+<li><a href="#">	Abacavir Mylan	 </a> </li>
+<li><a href="#">	Abacavir/Lamivudina/Zidovudina Mylan	 </a> </li>
+<li><a href="#">	Abasaglar - Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Abba	 </a> </li>
+<li><a href="#">	Abelcet	 </a> </li>
+<li><a href="#">	Aberipra	 </a> </li>
+<li><a href="#">	Abesart - Compressa Rivestita	 </a> </li>
+<li><a href="#">	Abilify - Compressa	 </a> </li>
+<li><a href="#">	Abilify - Compressa Orodispersibile	 </a> </li>
+<li><a href="#">	Abilify - Soluzione	 </a> </li>
+<li><a href="#">	Abilify - Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Abilify Maintena	 </a> </li>
+<li><a href="#">	Abimono	 </a> </li>
+<li><a href="#">	Abioclav	 </a> </li>
+<li><a href="#">	Abiostil	 </a> </li>
+<a href="#"><h1>Torna su</h1></a>
+	<br>
+	
+<a id="b"> </a>
+<h1>B</h1>
+<li><a href="#">	Baby Rinolo C.M.	 </a> </li>
+<li><a href="#">	Bacampicillina Aristo	 </a> </li>
+<li><a href="#">	Bacampicillina EG	 </a> </li>
+<li><a href="#">	Baclofene Bioindustria LIM	 </a> </li>
+<li><a href="#">	Baclofene Molteni - Preparazione Iniettabile	 </a> </li>
+<li><a href="#">	Baclofene Molteni - Preparazione Iniettabile, Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Baclofene Mylan Generics	 </a> </li>
+<li><a href="#">	Baclofene Sun - Soluzione	 </a> </li>
+<li><a href="#">	Bactigram - Capsula, Granulato	 </a> </li>
+<li><a href="#">	Bactigram - Compressa A Rilascio Modificato	 </a> </li>
+<li><a href="#">	Bactocin	 </a> </li>
+<li><a href="#">	Bactrim	 </a> </li>
+<li><a href="#">	Bactrim Perfusione	 </a> </li>
+<li><a href="#">	Balance - Siringhe Preriempite/fiala + Siringa, Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Balance - Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Balarm	 </a> </li>
+<li><a href="#">	Balcoga	 </a> </li>
+<li><a href="#">	Balfolic	 </a> </li>
+<li><a href="#">	Balsamo Italstadium	 </a> </li>
+<li><a href="#">	Balzide	 </a> </li>
+<li><a href="#">	Bamifix	 </a> </li>
+<li><a href="#">	Baraclude - Compressa Rivestita	 </a> </li>
+<li><a href="#">	Bart	 </a> </li>
+<li><a href="#">	Basalflex	 </a> </li>
+<a href="#"><h1>Torna su</h1></a>
+
+<br>
+	
+<a id="c"> </a>
+<h1>C</h1>
+<li><a href="#">	Cabaser	 </a> </li>
+<li><a href="#">	Cabergolina Ratiopharm - Compressa	 </a> </li>
+<li><a href="#">	Cabometyx	 </a> </li>
+<li><a href="#">	Cacit 1000	 </a> </li>
+<li><a href="#">	Cacit Vitamina D3	 </a> </li>
+<li><a href="#">	Cadtre	 </a> </li>
+<li><a href="#">	Caelyx	 </a> </li>
+<li><a href="#">	Cafergot	 </a> </li>
+<li><a href="#">	Calantha	 </a> </li>
+<li><a href="#">	Calcicold3	 </a> </li>
+<li><a href="#">	Calcifolin	 </a> </li>
+<li><a href="#">	Calcijex	 </a> </li>
+<li><a href="#">	Calcio + Magnesio Cloruro Salf	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 ABC	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 Almus	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 Aurobindo	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 DOC Generici	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 EG	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 Pensa	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 Tecnigen	 </a> </li>
+<li><a href="#">	Calcio Carbonato + Vit. D3 Union Health	 </a> </li>
+<li><a href="#">	Calcio Carbonato E Vitamina D3 Stirling	 </a> </li>
+<li><a href="#">	Calcio Carbonato EG	 </a> </li>
+<li><a href="#">	Calcio Cloruro Bioindustria Lim	 </a> </li>
+<li><a href="#">	Calcio Cloruro Galenica Senese - Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Calcio Cloruro Monico	 </a> </li>
+<li><a href="#">	Calcio Cloruro Salf	 </a> </li>
+<li><a href="#">	Calcio Folinato Sandoz	 </a> </li>
+<li><a href="#">	Calcio Gluconato 10% B. Braun	 </a> </li>
+<a href="#"><h1>Torna su</h1></a>
+
+<br>
+	
+<a id="d"> </a>
+<h1>D</h1>
+<li><a href="#">	Dacarbazina Lipomed - Fiale/flaconcini + Solvente	 </a> </li>
+<li><a href="#">	Dacarbazina Lipomed - Polvere	 </a> </li>
+<li><a href="#">	Dacarbazina Medac	 </a> </li>
+<li><a href="#">	Dacogen	 </a> </li>
+<li><a href="#">	Dacriogel	 </a> </li>
+<li><a href="#">	Daflon	 </a> </li>
+<li><a href="#">	Dafnegin - Crema, Ovulo	 </a> </li>
+<li><a href="#">	Dafnegin - Soluzione	 </a> </li>
+<li><a href="#">	Daivonex - Soluzione	 </a> </li>
+<li><a href="#">	Daivonex - Unguento	 </a> </li>
+<li><a href="#">	Daktarin - Capsula Molle	 </a> </li>
+<li><a href="#">	Daktarin - Crema	 </a> </li>
+<li><a href="#">	Daktarin - Gel	 </a> </li>
+<li><a href="#">	Daktarin Dermatologico	 </a> </li>
+<li><a href="#">	Dalacin-C	 </a> </li>
+<li><a href="#">	Dalacin-C Fosfato	 </a> </li>
+<li><a href="#">	Dalacin-T	 </a> </li>
+<li><a href="#">	Dalmadorm	 </a> </li>
+<li><a href="#">	Dalneva	 </a> </li>
+<li><a href="#">	Danatrol	 </a> </li>
+<li><a href="#">	Danifos	 </a> </li>
+<li><a href="#">	Danka	 </a> </li>
+<li><a href="#">	Danka Tosse	 </a> </li>
+<li><a href="#">	Dantrium	 </a> </li>
+<li><a href="#">	Daonil	 </a> </li>
+<li><a href="#">	Daparox - Compressa Rivestita	 </a> </li>
+<li><a href="#">	Daparox 33,1 Mg/ml	 </a> </li>
+<li><a href="#">	Daptomicina Accord - Polvere	 </a> </li>
+<li><a href="#">	Daptomicina Teva Generics	 </a> </li>
+<a href="#"><h1>Torna su</h1></a>
+
+<br>
+	
+<a id="e"> </a>
+<h1>E</h1>
+<li><a href="#">	Ebastina DOC	 </a> </li>
+<li><a href="#">	Ebastina EG	 </a> </li>
+<li><a href="#">	Ebastina Mylan Pharma	 </a> </li>
+<li><a href="#">	Ebastina Sandoz	 </a> </li>
+<li><a href="#">	Ebastina Teva	 </a> </li>
+<li><a href="#">	Ebixa - Compressa Rivestita	 </a> </li>
+<li><a href="#">	Ebixa - Soluzione	 </a> </li>
+<li><a href="#">	Ebrantil	 </a> </li>
+<li><a href="#">	Ecalta	 </a> </li>
+<li><a href="#">	Ecasolv	 </a> </li>
+<li><a href="#">	Eclipse	 </a> </li>
+<li><a href="#">	Ecocain	 </a> </li>
+<li><a href="#">	Ecocillin	 </a> </li>
+<li><a href="#">	Ecodergin - Crema	 </a> </li>
+<li><a href="#">	Ecomesol	 </a> </li>
+<li><a href="#">	Ecomì	 </a> </li>
+<li><a href="#">	Ecorex	 </a> </li>
+<li><a href="#">	Ecosteril	 </a> </li>
+<li><a href="#">	Ecoval	 </a> </li>
+<li><a href="#">	Ecubalin	 </a> </li>
+<li><a href="#">	Ecuhead	 </a> </li>
+<li><a href="#">	Ecumens	 </a> </li>
+<li><a href="#">	Edenil	 </a> </li>
+<li><a href="#">	Edera Dr. Theiss	 </a> </li>
+<li><a href="#">	Edesia	 </a> </li>
+<li><a href="#">	Edeven C.M.	 </a> </li>
+<li><a href="#">	Edevexin - Compressa Rivestita	 </a> </li>
+<li><a href="#">	Edevexin - Polvere	 </a> </li>
+<li><a href="#">	Edronax	 </a> </li>
+<li><a href="#">	Edurant	 </a> </li>
+<a href="#"><h1>Torna su</h1></a>
+
+<br>
+	
+<a id="f"> </a>
+<h1>F</h1>
+<li><a href="#">	Fabrazyme	 </a> </li>
+<li><a href="#">	Falev	 </a> </li>
+<li><a href="#">	Falvin - Crema, Ovulo, Soluzione	 </a> </li>
+<li><a href="#">	Falvin - Crema, Spray	 </a> </li>
+<li><a href="#">	Famciclovir Mylan Generics	 </a> </li>
+<li><a href="#">	Famciclovir Pensa	 </a> </li>
+<li><a href="#">	Famciclovir Sandoz	 </a> </li>
+<li><a href="#">	Famciclovir Teva	 </a> </li>
+<li><a href="#">	Famotidina EG	 </a> </li>
+<li><a href="#">	Fampyra	 </a> </li>
+<li><a href="#">	Famvir	 </a> </li>
+<li><a href="#">	Fanhdi	 </a> </li>
+<li><a href="#">	Faralzin	 </a> </li>
+<li><a href="#">	Fareston	 </a> </li>
+<li><a href="#">	Farganesse	 </a> </li>
+<li><a href="#">	Farin Gola	 </a> </li>
+<li><a href="#">	Faringotricina	 </a> </li>
+<li><a href="#">	Farlutal - Compressa	 </a> </li>
+<li><a href="#">	Farmaiod	 </a> </li>
+<li><a href="#">	Farmasept	 </a> </li>
+<li><a href="#">	Farmorubicina - Polvere	 </a> </li>
+<li><a href="#">	Farmorubicina - Soluzione (uso Interno)	 </a> </li>
+<li><a href="#">	Farvicett	 </a> </li>
+<li><a href="#">	Fasenra	 </a> </li>
+<li><a href="#">	Faslodex	 </a> </li>
+<li><a href="#">	Fastjekt - Soluzione (uso Interno)	 </a> </li>
+
+</div>
+
+
+
+
+	<!--lista farmaci -->
+	<div class="w3-row-padding w3-center">
+		<div class="w3-col m3"></div>
+		
+
+
+		
+	</div>
+
+	<!-- Modal for full size images on click-->
+
+
+	<!-- Footer -->
+	<footer
+		class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+		<a href="#home" class="w3-button w3-light-grey"><i
+			class="fa fa-arrow-up w3-margin-right"></i>TORNA ALL'INIZIO</a>
+		<div class="w3-xlarge w3-section">
+			Created by:<br>
+			 Violin Alessandro - Negri Matteo - Calabrese Gloria - Greco Stefano
+		</div>
+	</footer>
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+		
+		<script src="js/Lista_farmaci.js"></script>	
+</body>
+</html>
